@@ -7,7 +7,7 @@ _Compile Darwin-Apache-MySQL-PHP Development Server from Source_
 ### Requirements ###
 
 - Mac OS High Sierra
-- Xcode Command Line Tools (run `xcode --select` in Terminal to install)
+- Xcode Command Line Tools (run `xcode-select --install` in Terminal to install)
 - [Java SE Development Kit 9.0.4](http://www.oracle.com/technetwork/java/javase/downloads/jdk9-downloads-3848520.html)
 - [MySQL Community Server](https://dev.mysql.com/downloads/mysql/)
 - [Git SCM](https://git-scm.com/)
