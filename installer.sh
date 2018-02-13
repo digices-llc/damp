@@ -1654,6 +1654,8 @@ rm index.html
 # download the startup repo
 git clone https://github.com/digices-llc/htdocs.git
 
+# install phpMyAdmin
+
 mkdir /var/tmp/src/phpmyadmin/phpmyadmin
 
 cd /var/tmp/src/phpmyadmin/phpmyadmin
