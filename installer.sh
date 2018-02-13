@@ -1499,7 +1499,9 @@ mkdir -p /var/tmp/src/libgd/gd2
 
 cd /var/tmp/src/libgd/gd2
 
-curl -O https://github.com/libgd/libgd/releases/download/gd-2.2.5/libgd-2.2.5.tar.gz
+curl -O https://codeload.github.com/libgd/libgd/tar.gz/gd-2.2.5
+
+mv gd-2.2.5 libgd-2.2.5.tar.gz
 
 tar -xzf libgd-2.2.5.tar.gz
 
