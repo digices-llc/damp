@@ -1038,28 +1038,6 @@ cd ../
 
 rm -R sed-4.4
 
-# install westes/flex
-
-mkdir -p /var/tmp/src/westes/flex
-
-cd /var/tmp/src/westes/flex
-
-curl -O https://github-production-release-asset-2e65be.s3.amazonaws.com/14521001/23794388-327c-11e7-8219-c41432b94acf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAIWNJYAX4CSVEH53A%2F20180211%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20180211T191732Z&X-Amz-Expires=300&X-Amz-Signature=4e1255b0556c2e7a1d440ea12eae262e4cad35a91d72f5a917adc45f86743108&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3Dflex-2.6.4.tar.gz&response-content-type=application%2Foctet-stream
-
-tar -xzf flex-2.6.4.tar.gz
-
-cd flex-2.6.4
-
-./configure --prefix=/usr/local
-
-make
-
-make install
-
-cd ../
-
-rm -R flex-2.6.4
-
 # install perl/perl5
 
 mkdir -p /var/tmp/src/perl/perl5
