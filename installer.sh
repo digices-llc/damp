@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# store installer directory path
+
+REPO=$(dirname "$0")
+
 xcode-select --switch /
 
 # install bzip/bzip2
@@ -1276,8 +1280,13 @@ cd ../
 
 rm -R httpd-2.4.29
 
+# copy the launch daemon
+cp $REPO/resources/org.apache.httpd.plist /Library/LaunchDaemons/
 
+# start apache automatically
+launchctl load /Library/LaunchDaemons/org.apache.httpd.plist
 
+# start the server
 apachectl start
 
 ### break ###
@@ -1639,7 +1648,7 @@ rm -R php-7.2.2
 # navigate to the web root
 cd /usr/local/htdocs
 
-# remove the default index file
+# remove the default 'It works!' file
 rm index.html
 
 # download the startup repo
@@ -1655,12 +1664,12 @@ mv /usr/local/htdocs/phpMyAdmin-4.7.7-english /usr/local/htdocs/phpmyadmin
 mv /usr/local/conf/httpd.conf /usr/local/conf/httpd.conf.bak
 
 # copy the php conf file
-cp /var/tmp/src/zend/php/httpd.conf /usr/local/conf/httpd.conf
+cp $DIR/resources/httpd.conf /usr/local/conf/httpd.conf
 
 apachectl restart
 
-# test
+# test php (opens in default browser)
 open http://localhost/info.php
 
-# configure phpmyadmin
+# configure phpmyadmin (opens in browser tab)
 open http://localhost/phpmyadmin/setup
