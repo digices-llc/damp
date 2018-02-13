@@ -1654,11 +1654,22 @@ rm index.html
 # download the startup repo
 git clone https://github.com/digices-llc/htdocs.git
 
-# extract phpmyadmin into htdocs directory
-tar -xzf /var/tmp/phpmyadmin/phpmyadmin/phpMyAdmin-4.7.7-english.tar.gz --directory /usr/local/htdocs/
+mkdir /var/tmp/src/phpmyadmin/phpmyadmin
+
+cd /var/tmp/src/phpmyadmin/phpmyadmin
+
+curl -O https://files.phpmyadmin.net/phpMyAdmin/4.7.7/phpMyAdmin-4.7.7-english.tar.gz
+
+tar -xzf phpMyAdmin-4.7.7-english.tar.gz
 
 # rename the directory
-mv /usr/local/htdocs/phpMyAdmin-4.7.7-english /usr/local/htdocs/phpmyadmin
+mv phpMyAdmin-4.7.7-english /usr/local/share/
+
+# rename the directory
+mv /usr/local/share/phpMyAdmin-4.7.7-english /usr/local/share/phpmyadmin
+
+# change the owner to _www
+chown -R _www:staff /usr/local/share/phpmyadmin
 
 # back up the original conf file
 mv /usr/local/conf/httpd.conf /usr/local/conf/httpd.conf.bak
