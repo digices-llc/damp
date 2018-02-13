@@ -1110,9 +1110,11 @@ mkdir -p /var/tmp/src/gnome/glib2
 
 cd /var/tmp/src/gnome/glib2
 
-curl -O https://ftp.gnome.org/pub/gnome/sources/glib/2.55/glib-2.55.1.tar.xz
+curl -O https://codeload.github.com/GNOME/glib/tar.gz/2.55.1
 
-tar -xJf glib-2.55.1.tar.xz
+mv 2.55.1 glib-2.55.1.tar.gz
+
+tar -xzf glib-2.55.1.tar.gz
 
 cd glib-2.55.1
 
