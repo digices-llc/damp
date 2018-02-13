@@ -926,7 +926,7 @@ make install
 
 cd ../
 
-rm -R libxslt-1.1.33-rc1
+rm -R libxslt-1.1.33
 
 # install freetype/freetype
 
