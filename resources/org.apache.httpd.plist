@@ -3,7 +3,7 @@
 <plist version="1.0">
   <dict>
     <key>Label</key>
-    <string>org.apache.apache2</string>
+    <string>org.apache.httpd</string>
     <key>ProgramArguments</key>
     <array>
       <string>/usr/local/apache/bin/httpd</string>
