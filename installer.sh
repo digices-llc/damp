@@ -200,7 +200,7 @@ make
 
 make install
 
-cd ../
+cd ../../
 
 rm -R icu
 
