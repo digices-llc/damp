@@ -1433,11 +1433,13 @@ mkdir -p /var/tmp/src/openjpeg/openjpeg
 
 cd /var/tmp/src/openjpeg/openjpeg
 
-curl -O https://github.com/uclouvain/openjpeg/archive/v2.3.0.tar.gz
+curl -O https://codeload.github.com/uclouvain/openjpeg/tar.gz/v2.3.0
 
-tar -xzf v2.3.0.tar.gz
+mv v2.3.0 openjpeg-2.3.0.tar.gz
 
-cd v2.3.0
+tar -xzf openjpeg-2.3.0.tar.gz
+
+cd openjpeg-2.3.0
 
 ./configure --prefix=/usr/local
 
@@ -1447,7 +1449,7 @@ make install
 
 cd ../
 
-rm -R v2.3.0
+rm -R openjpeg-2.3.0
 
 # install cairographics/cairo
 
