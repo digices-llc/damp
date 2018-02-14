@@ -2,17 +2,23 @@
 
 # install ctags #
 
-echo "----INSTALLING CTAGS 5.8----\n"
+$vnd="ctags"
 
-mkdir -p /var/tmp/src/ctags/ctags
+$pkg="ctags"
 
-cd /var/tmp/src/ctags/ctags
+$vsn="5.8"
 
-curl -Ok https://gigenet.dl.sourceforge.net/project/ctags/ctags/5.8/ctags-5.8.tar.gz
+echo "----Installing $pkg $vsn----\n"
 
-tar -xzf ctags-5.8.tar.gz
+mkdir -p /var/tmp/src/$vnd/$pkg
 
-cd ctags-5.8
+cd /var/tmp/src/$vnd/$pkg
+
+curl -Ok https://gigenet.dl.sourceforge.net/project/ctags/ctags/5.8/$pkg-$vsn.tar.gz
+
+tar -xzf $pkg-$vsn.tar.gz
+
+cd $pkg-$vsn
 
 ./configure --prefix=/usr/local
 
@@ -22,13 +28,13 @@ make install
 
 cd ../
 
-rm -R ctags-5.8
+rm -R $pkg-$vsn
 
 echo "----PROCESS COMPLETE----\n"
 
-ipath=$(which ctags)
+ipath=$(which $pkg)
 
-ivers=$(ctags --version)
+ivers=$($pkg --version)
 
-echo "----CTAGS $ivers INSTALLED AT $ipath----\n"
+echo "----$pkg $ivers INSTALLED AT $ipath----\n"
 
