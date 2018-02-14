@@ -2,6 +2,8 @@
 
 # install bzip2 #
 
+echo "----INSTALLING BZIP2 1.0.6----\n"
+
 mkdir -p /var/tmp/src/bzip/bzip2
 
 cd /var/tmp/src/bzip/bzip2
