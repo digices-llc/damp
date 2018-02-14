@@ -2,17 +2,23 @@
 
 # install bzip2 #
 
-echo "----INSTALLING BZIP2 1.0.6----\n"
+vnd="bzip"
 
-mkdir -p /var/tmp/src/bzip/bzip2
+pkg="bzip2"
 
-cd /var/tmp/src/bzip/bzip2
+vsn="1.0.6"
 
-curl -O http://www.bzip.org/1.0.6/bzip2-1.0.6.tar.gz
+echo "----Installing $pkg $vsn----\n"
 
-tar -xzf bzip2-1.0.6.tar.gz
+mkdir -p /var/tmp/src/$vnd/$pkg
 
-cd bzip2-1.0.6
+cd /var/tmp/src/$vnd/$pkg
+
+curl -O http://www.bzip.org/$vsn/$pkg-$vsn.tar.gz
+
+tar -xzf $pkg-$vsn.tar.gz
+
+cd $pkg-$vsn
 
 ./configure --prefix=/usr/local
 
@@ -22,4 +28,4 @@ make install
 
 cd ../
 
-rm -R bzip2-1.0.6
+rm -R $pkg-$vsn
