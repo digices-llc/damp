@@ -29,3 +29,11 @@ make install
 cd ../
 
 rm -R $pkg-$vsn
+
+echo "----PROCESS COMPLETE----\n"
+
+ipath=$(which $pkg)
+
+ivers=$($pkg --version)
+
+echo "----$pkg $ivers INSTALLED AT $ipath----\n"
