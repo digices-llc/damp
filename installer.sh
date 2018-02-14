@@ -1640,7 +1640,7 @@ git clone https://github.com/digices-llc/htdocs.git
 
 # install phpMyAdmin
 
-mkdir /var/tmp/src/phpmyadmin/phpmyadmin
+mkdir -p /var/tmp/src/phpmyadmin/phpmyadmin
 
 cd /var/tmp/src/phpmyadmin/phpmyadmin
 
